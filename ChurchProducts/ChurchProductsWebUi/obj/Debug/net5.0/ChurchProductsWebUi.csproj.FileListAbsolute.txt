@@ -1,0 +1,9 @@
+F:\Repo\ChurchProducts\ChurchProducts\ChurchProductsWebUi\obj\Debug\net5.0\ChurchProductsWebUi.csprojAssemblyReference.cache
+F:\Repo\ChurchProducts\ChurchProducts\ChurchProductsWebUi\obj\Debug\net5.0\ChurchProductsWebUi.GeneratedMSBuildEditorConfig.editorconfig
+F:\Repo\ChurchProducts\ChurchProducts\ChurchProductsWebUi\obj\Debug\net5.0\ChurchProductsWebUi.AssemblyInfoInputs.cache
+F:\Repo\ChurchProducts\ChurchProducts\ChurchProductsWebUi\obj\Debug\net5.0\ChurchProductsWebUi.AssemblyInfo.cs
+F:\Repo\ChurchProducts\ChurchProducts\ChurchProductsWebUi\obj\Debug\net5.0\ChurchProductsWebUi.csproj.CoreCompileInputs.cache
+F:\Repo\ChurchProducts\ChurchProducts\ChurchProductsWebUi\obj\Debug\net5.0\ChurchProductsWebUi.MvcApplicationPartsAssemblyInfo.cs
+F:\Repo\ChurchProducts\ChurchProducts\ChurchProductsWebUi\obj\Debug\net5.0\ChurchProductsWebUi.MvcApplicationPartsAssemblyInfo.cache
+F:\Repo\ChurchProducts\ChurchProducts\ChurchProductsWebUi\obj\Debug\net5.0\ChurchProductsWebUi.RazorAssemblyInfo.cache
+F:\Repo\ChurchProducts\ChurchProducts\ChurchProductsWebUi\obj\Debug\net5.0\ChurchProductsWebUi.RazorAssemblyInfo.cs

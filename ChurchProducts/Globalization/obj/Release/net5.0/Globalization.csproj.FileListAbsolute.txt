@@ -1,0 +1,12 @@
+E:\My Repo\ChurchStudio\ChurchStudio\Globalization\bin\Release\net5.0\Globalization.deps.json
+E:\My Repo\ChurchStudio\ChurchStudio\Globalization\bin\Release\net5.0\Globalization.dll
+E:\My Repo\ChurchStudio\ChurchStudio\Globalization\bin\Release\net5.0\ref\Globalization.dll
+E:\My Repo\ChurchStudio\ChurchStudio\Globalization\bin\Release\net5.0\Globalization.pdb
+E:\My Repo\ChurchStudio\ChurchStudio\Globalization\obj\Release\net5.0\Globalization.csprojAssemblyReference.cache
+E:\My Repo\ChurchStudio\ChurchStudio\Globalization\obj\Release\net5.0\Globalization.GeneratedMSBuildEditorConfig.editorconfig
+E:\My Repo\ChurchStudio\ChurchStudio\Globalization\obj\Release\net5.0\Globalization.AssemblyInfoInputs.cache
+E:\My Repo\ChurchStudio\ChurchStudio\Globalization\obj\Release\net5.0\Globalization.AssemblyInfo.cs
+E:\My Repo\ChurchStudio\ChurchStudio\Globalization\obj\Release\net5.0\Globalization.csproj.CoreCompileInputs.cache
+E:\My Repo\ChurchStudio\ChurchStudio\Globalization\obj\Release\net5.0\Globalization.dll
+E:\My Repo\ChurchStudio\ChurchStudio\Globalization\obj\Release\net5.0\ref\Globalization.dll
+E:\My Repo\ChurchStudio\ChurchStudio\Globalization\obj\Release\net5.0\Globalization.pdb

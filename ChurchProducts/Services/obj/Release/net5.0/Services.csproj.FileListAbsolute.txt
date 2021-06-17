@@ -1,0 +1,12 @@
+E:\My Repo\ChurchStudio\ChurchStudio\Services\bin\Release\net5.0\Services.deps.json
+E:\My Repo\ChurchStudio\ChurchStudio\Services\bin\Release\net5.0\Services.dll
+E:\My Repo\ChurchStudio\ChurchStudio\Services\bin\Release\net5.0\ref\Services.dll
+E:\My Repo\ChurchStudio\ChurchStudio\Services\bin\Release\net5.0\Services.pdb
+E:\My Repo\ChurchStudio\ChurchStudio\Services\obj\Release\net5.0\Services.csprojAssemblyReference.cache
+E:\My Repo\ChurchStudio\ChurchStudio\Services\obj\Release\net5.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+E:\My Repo\ChurchStudio\ChurchStudio\Services\obj\Release\net5.0\Services.AssemblyInfoInputs.cache
+E:\My Repo\ChurchStudio\ChurchStudio\Services\obj\Release\net5.0\Services.AssemblyInfo.cs
+E:\My Repo\ChurchStudio\ChurchStudio\Services\obj\Release\net5.0\Services.csproj.CoreCompileInputs.cache
+E:\My Repo\ChurchStudio\ChurchStudio\Services\obj\Release\net5.0\Services.dll
+E:\My Repo\ChurchStudio\ChurchStudio\Services\obj\Release\net5.0\ref\Services.dll
+E:\My Repo\ChurchStudio\ChurchStudio\Services\obj\Release\net5.0\Services.pdb

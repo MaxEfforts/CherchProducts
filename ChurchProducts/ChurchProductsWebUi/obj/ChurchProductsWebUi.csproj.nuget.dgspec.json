@@ -1,0 +1,379 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\Repo\\ChurchProducts\\ChurchProducts\\ChurchProductsWebUi\\ChurchProductsWebUi.csproj": {}
+  },
+  "projects": {
+    "F:\\Repo\\ChurchProducts\\ChurchProducts\\ChurchProductsWebUi\\ChurchProductsWebUi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Repo\\ChurchProducts\\ChurchProducts\\ChurchProductsWebUi\\ChurchProductsWebUi.csproj",
+        "projectName": "ChurchProductsWebUi",
+        "projectPath": "F:\\Repo\\ChurchProducts\\ChurchProducts\\ChurchProductsWebUi\\ChurchProductsWebUi.csproj",
+        "packagesPath": "C:\\Users\\Kerolos\\.nuget\\packages\\",
+        "outputPath": "F:\\Repo\\ChurchProducts\\ChurchProducts\\ChurchProductsWebUi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Kerolos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "F:\\Repo\\ChurchProducts\\ChurchProducts\\ChurchProducts\\ChurchProducts.csproj": {
+                "projectPath": "F:\\Repo\\ChurchProducts\\ChurchProducts\\ChurchProducts\\ChurchProducts.csproj"
+              },
+              "F:\\Repo\\ChurchProducts\\ChurchProducts\\DbModels\\DbModels.csproj": {
+                "projectPath": "F:\\Repo\\ChurchProducts\\ChurchProducts\\DbModels\\DbModels.csproj"
+              },
+              "F:\\Repo\\ChurchProducts\\ChurchProducts\\DbRepository\\DbRepository.csproj": {
+                "projectPath": "F:\\Repo\\ChurchProducts\\ChurchProducts\\DbRepository\\DbRepository.csproj"
+              },
+              "F:\\Repo\\ChurchProducts\\ChurchProducts\\Services\\Services.csproj": {
+                "projectPath": "F:\\Repo\\ChurchProducts\\ChurchProducts\\Services\\Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\Repo\\ChurchProducts\\ChurchProducts\\ChurchProducts\\ChurchProducts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Repo\\ChurchProducts\\ChurchProducts\\ChurchProducts\\ChurchProducts.csproj",
+        "projectName": "ChurchProducts",
+        "projectPath": "F:\\Repo\\ChurchProducts\\ChurchProducts\\ChurchProducts\\ChurchProducts.csproj",
+        "packagesPath": "C:\\Users\\Kerolos\\.nuget\\packages\\",
+        "outputPath": "F:\\Repo\\ChurchProducts\\ChurchProducts\\ChurchProducts\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Kerolos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "F:\\Repo\\ChurchProducts\\ChurchProducts\\DbModels\\DbModels.csproj": {
+                "projectPath": "F:\\Repo\\ChurchProducts\\ChurchProducts\\DbModels\\DbModels.csproj"
+              },
+              "F:\\Repo\\ChurchProducts\\ChurchProducts\\DbRepository\\DbRepository.csproj": {
+                "projectPath": "F:\\Repo\\ChurchProducts\\ChurchProducts\\DbRepository\\DbRepository.csproj"
+              },
+              "F:\\Repo\\ChurchProducts\\ChurchProducts\\Services\\Services.csproj": {
+                "projectPath": "F:\\Repo\\ChurchProducts\\ChurchProducts\\Services\\Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\Repo\\ChurchProducts\\ChurchProducts\\DbModels\\DbModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Repo\\ChurchProducts\\ChurchProducts\\DbModels\\DbModels.csproj",
+        "projectName": "DbModels",
+        "projectPath": "F:\\Repo\\ChurchProducts\\ChurchProducts\\DbModels\\DbModels.csproj",
+        "packagesPath": "C:\\Users\\Kerolos\\.nuget\\packages\\",
+        "outputPath": "F:\\Repo\\ChurchProducts\\ChurchProducts\\DbModels\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Kerolos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\Repo\\ChurchProducts\\ChurchProducts\\DbRepository\\DbRepository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Repo\\ChurchProducts\\ChurchProducts\\DbRepository\\DbRepository.csproj",
+        "projectName": "DbRepository",
+        "projectPath": "F:\\Repo\\ChurchProducts\\ChurchProducts\\DbRepository\\DbRepository.csproj",
+        "packagesPath": "C:\\Users\\Kerolos\\.nuget\\packages\\",
+        "outputPath": "F:\\Repo\\ChurchProducts\\ChurchProducts\\DbRepository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Kerolos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "F:\\Repo\\ChurchProducts\\ChurchProducts\\DbModels\\DbModels.csproj": {
+                "projectPath": "F:\\Repo\\ChurchProducts\\ChurchProducts\\DbModels\\DbModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\Repo\\ChurchProducts\\ChurchProducts\\Services\\Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Repo\\ChurchProducts\\ChurchProducts\\Services\\Services.csproj",
+        "projectName": "Services",
+        "projectPath": "F:\\Repo\\ChurchProducts\\ChurchProducts\\Services\\Services.csproj",
+        "packagesPath": "C:\\Users\\Kerolos\\.nuget\\packages\\",
+        "outputPath": "F:\\Repo\\ChurchProducts\\ChurchProducts\\Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Kerolos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "F:\\Repo\\ChurchProducts\\ChurchProducts\\DbModels\\DbModels.csproj": {
+                "projectPath": "F:\\Repo\\ChurchProducts\\ChurchProducts\\DbModels\\DbModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

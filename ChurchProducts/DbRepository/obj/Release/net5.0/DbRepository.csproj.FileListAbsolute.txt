@@ -1,0 +1,15 @@
+E:\My Repo\ChurchStudio\ChurchStudio\DbRepository\bin\Release\net5.0\DbRepository.deps.json
+E:\My Repo\ChurchStudio\ChurchStudio\DbRepository\bin\Release\net5.0\DbRepository.dll
+E:\My Repo\ChurchStudio\ChurchStudio\DbRepository\bin\Release\net5.0\ref\DbRepository.dll
+E:\My Repo\ChurchStudio\ChurchStudio\DbRepository\bin\Release\net5.0\DbRepository.pdb
+E:\My Repo\ChurchStudio\ChurchStudio\DbRepository\bin\Release\net5.0\DbModels.dll
+E:\My Repo\ChurchStudio\ChurchStudio\DbRepository\bin\Release\net5.0\DbModels.pdb
+E:\My Repo\ChurchStudio\ChurchStudio\DbRepository\obj\Release\net5.0\DbRepository.csprojAssemblyReference.cache
+E:\My Repo\ChurchStudio\ChurchStudio\DbRepository\obj\Release\net5.0\DbRepository.GeneratedMSBuildEditorConfig.editorconfig
+E:\My Repo\ChurchStudio\ChurchStudio\DbRepository\obj\Release\net5.0\DbRepository.AssemblyInfoInputs.cache
+E:\My Repo\ChurchStudio\ChurchStudio\DbRepository\obj\Release\net5.0\DbRepository.AssemblyInfo.cs
+E:\My Repo\ChurchStudio\ChurchStudio\DbRepository\obj\Release\net5.0\DbRepository.csproj.CoreCompileInputs.cache
+E:\My Repo\ChurchStudio\ChurchStudio\DbRepository\obj\Release\net5.0\DbRepository.csproj.CopyComplete
+E:\My Repo\ChurchStudio\ChurchStudio\DbRepository\obj\Release\net5.0\DbRepository.dll
+E:\My Repo\ChurchStudio\ChurchStudio\DbRepository\obj\Release\net5.0\ref\DbRepository.dll
+E:\My Repo\ChurchStudio\ChurchStudio\DbRepository\obj\Release\net5.0\DbRepository.pdb
