@@ -22,3 +22,15 @@ F:\Repo\ChurchProducts\ChurchProducts\DbModels\bin\Debug\net5.0\DbModels.deps.js
 F:\Repo\ChurchProducts\ChurchProducts\DbModels\bin\Debug\net5.0\DbModels.dll
 F:\Repo\ChurchProducts\ChurchProducts\DbModels\bin\Debug\net5.0\ref\DbModels.dll
 F:\Repo\ChurchProducts\ChurchProducts\DbModels\bin\Debug\net5.0\DbModels.pdb
+E:\My Repo\CherchProducts\ChurchProducts\DbModels\bin\Debug\net5.0\DbModels.deps.json
+E:\My Repo\CherchProducts\ChurchProducts\DbModels\bin\Debug\net5.0\DbModels.dll
+E:\My Repo\CherchProducts\ChurchProducts\DbModels\bin\Debug\net5.0\ref\DbModels.dll
+E:\My Repo\CherchProducts\ChurchProducts\DbModels\bin\Debug\net5.0\DbModels.pdb
+E:\My Repo\CherchProducts\ChurchProducts\DbModels\obj\Debug\net5.0\DbModels.csprojAssemblyReference.cache
+E:\My Repo\CherchProducts\ChurchProducts\DbModels\obj\Debug\net5.0\DbModels.GeneratedMSBuildEditorConfig.editorconfig
+E:\My Repo\CherchProducts\ChurchProducts\DbModels\obj\Debug\net5.0\DbModels.AssemblyInfoInputs.cache
+E:\My Repo\CherchProducts\ChurchProducts\DbModels\obj\Debug\net5.0\DbModels.AssemblyInfo.cs
+E:\My Repo\CherchProducts\ChurchProducts\DbModels\obj\Debug\net5.0\DbModels.csproj.CoreCompileInputs.cache
+E:\My Repo\CherchProducts\ChurchProducts\DbModels\obj\Debug\net5.0\DbModels.dll
+E:\My Repo\CherchProducts\ChurchProducts\DbModels\obj\Debug\net5.0\ref\DbModels.dll
+E:\My Repo\CherchProducts\ChurchProducts\DbModels\obj\Debug\net5.0\DbModels.pdb
