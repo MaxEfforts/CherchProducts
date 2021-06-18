@@ -1,0 +1,107 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>aspnet-WebUI-9B8FBAC6-13CF-49C9-A76E-E27215460444</UserSecretsId>
+    <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\1.png" />
+    <None Include="wwwroot\images\10.png" />
+    <None Include="wwwroot\images\11.jpg" />
+    <None Include="wwwroot\images\111.jpg" />
+    <None Include="wwwroot\images\12.png" />
+    <None Include="wwwroot\images\13.png" />
+    <None Include="wwwroot\images\14.png" />
+    <None Include="wwwroot\images\15.png" />
+    <None Include="wwwroot\images\16.png" />
+    <None Include="wwwroot\images\17.png" />
+    <None Include="wwwroot\images\2.png" />
+    <None Include="wwwroot\images\22.jpg" />
+    <None Include="wwwroot\images\3.png" />
+    <None Include="wwwroot\images\4.png" />
+    <None Include="wwwroot\images\44.jpg" />
+    <None Include="wwwroot\images\5.png" />
+    <None Include="wwwroot\images\6.png" />
+    <None Include="wwwroot\images\7.png" />
+    <None Include="wwwroot\images\8.png" />
+    <None Include="wwwroot\images\9.png" />
+    <None Include="wwwroot\images\arrow.png" />
+    <None Include="wwwroot\images\b1.jpg" />
+    <None Include="wwwroot\images\b3.jpg" />
+    <None Include="wwwroot\images\bv1.png" />
+    <None Include="wwwroot\images\bv2.png" />
+    <None Include="wwwroot\images\bv3.png" />
+    <None Include="wwwroot\images\bv4.png" />
+    <None Include="wwwroot\images\bv5.png" />
+    <None Include="wwwroot\images\bv6.png" />
+    <None Include="wwwroot\images\bv7.png" />
+    <None Include="wwwroot\images\bv8.jpg" />
+    <None Include="wwwroot\images\bv8.png" />
+    <None Include="wwwroot\images\bv9.png" />
+    <None Include="wwwroot\images\card.png" />
+    <None Include="wwwroot\images\check.png" />
+    <None Include="wwwroot\images\close_1.png" />
+    <None Include="wwwroot\images\gu1.png" />
+    <None Include="wwwroot\images\gu2.png" />
+    <None Include="wwwroot\images\gu3.png" />
+    <None Include="wwwroot\images\gu4.png" />
+    <None Include="wwwroot\images\gu5.png" />
+    <None Include="wwwroot\images\gu6.png" />
+    <None Include="wwwroot\images\gu7.png" />
+    <None Include="wwwroot\images\gu8.png" />
+    <None Include="wwwroot\images\gu9.png" />
+    <None Include="wwwroot\images\hh1.png" />
+    <None Include="wwwroot\images\hh2.png" />
+    <None Include="wwwroot\images\hh3.png" />
+    <None Include="wwwroot\images\hh4.png" />
+    <None Include="wwwroot\images\hh5.png" />
+    <None Include="wwwroot\images\hh6.png" />
+    <None Include="wwwroot\images\hh7.png" />
+    <None Include="wwwroot\images\hh8.png" />
+    <None Include="wwwroot\images\hh9.png" />
+    <None Include="wwwroot\images\icon1.png" />
+    <None Include="wwwroot\images\icon2.png" />
+    <None Include="wwwroot\images\offer.png" />
+    <None Include="wwwroot\images\p2.jpg" />
+    <None Include="wwwroot\images\p3.jpg" />
+    <None Include="wwwroot\images\p4.jpg" />
+    <None Include="wwwroot\images\pc1.png" />
+    <None Include="wwwroot\images\pc2.png" />
+    <None Include="wwwroot\images\pc3.png" />
+    <None Include="wwwroot\images\pc4.png" />
+    <None Include="wwwroot\images\pc5.png" />
+    <None Include="wwwroot\images\pc6.png" />
+    <None Include="wwwroot\images\pc7.png" />
+    <None Include="wwwroot\images\pc8.png" />
+    <None Include="wwwroot\images\pc9.jpg" />
+    <None Include="wwwroot\images\pf1.png" />
+    <None Include="wwwroot\images\pf2.png" />
+    <None Include="wwwroot\images\pf3.png" />
+    <None Include="wwwroot\images\pf4.png" />
+    <None Include="wwwroot\images\pf5.png" />
+    <None Include="wwwroot\images\pf6.png" />
+    <None Include="wwwroot\images\pf7.png" />
+    <None Include="wwwroot\images\pf8.png" />
+    <None Include="wwwroot\images\pf9.png" />
+    <None Include="wwwroot\images\si1.jpg" />
+    <None Include="wwwroot\images\star.png" />
+    <None Include="wwwroot\images\star1.png" />
+    <None Include="wwwroot\images\t1.jpg" />
+    <None Include="wwwroot\images\t2.jpg" />
+    <None Include="wwwroot\images\t3.jpg" />
+    <None Include="wwwroot\images\t4.jpg" />
+    <None Include="wwwroot\images\tick.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.6" />
+  </ItemGroup>
+
+</Project>
