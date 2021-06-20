@@ -10,7 +10,21 @@
     <title>@ViewData["Title"] - ChurchProducts</title>
     <link rel="stylesheet" href="~/Identity/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/Identity/css/site.css" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/lib/coreui/icons/css/coreui-icons.min.css" rel="stylesheet" />
+    <link href="~/lib/flag-icon-css/css/flag-icon.css" rel="stylesheet" />
+    <link href="~/lib/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" />
+    <link href="~/lib/pace-progress/css/pace.css" rel="stylesheet" />
+    <!-- MAIN CSS -->
+    <link href="~/lib/coreui/css/style.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+
+    <script src="~/js/site.js"></script>
 </head>
 <body>
     <header>
@@ -39,89 +53,45 @@
             </div>
         </nav>
     </header>
-    @*<div class="modal" tabindex="-1" role="dialog" id="form-modal">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title"></h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
 
-                    </div>
-                </div>
-            </div>
-        </div>*@
-    ////////
 
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
+    <div class="modal" tabindex="-1" role="dialog" id="form-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="loaderbody" id="loaderbody">
+        <div class="loader"></div>
+    </div>
     <footer class="footer border-top text-muted">
         <div class="container">
         </div>
     </footer>
-    <div class="modal fade" id="form-modal">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <h4 class="modal-title"></h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-
-                <!-- Modal body -->
-                <div class="modal-body text-center my-3" id="SmallModal_body">
-                    <div class="spinner-border text-success"></div>
-                </div>
-
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-
-            </div>
-        </div>
-    </div>
+    
     <script src="~/Identity/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/Identity/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/Identity/js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript" charset="utf8" src="https:////cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="~/js/site.js"></script>
+    <script src="~/js/notify.js"></script>
+    <script src="~/js/notify.min.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
-<script>
-    showInPopup = (url, title) => {
-        $.ajax({
-            type: 'GET',
-            url: url,
-            success: function (res) {
-                $('#form-modal .modal-body').html(res);
-                $('#form-modal .modal-title').html(title);
-                $('#form-modal').modal('show');
-                // to make popup draggable
-                $('.modal-dialog').draggable({
-                    handle: ".modal-header"
-                });
-            }
-        })
-    }
-    debugger;
-  $(document).ready(function () {
-                $.ajax({
-                    url: '@Url.Action("Products/AllProduct")',
-                    type: 'GET',
-                    cache: false,
-                    data: { meter_id: meterId }
-                    }).done(function(result) {
-                    $('#PartialView').html(result);
-                    });
-                    });
 
-</script>
     

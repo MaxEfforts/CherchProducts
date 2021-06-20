@@ -15,5 +15,7 @@ namespace DbModels.ViewModels
         public string ProductName { get; set; }
         [Required(ErrorMessage = "يجب ادخال سعر المنتج")]
         public double ProductPrice { get; set; }
+        [Required(ErrorMessage = "صورة المنتج")]
+        public string ProductImgPath { get; set; }
     }
 }

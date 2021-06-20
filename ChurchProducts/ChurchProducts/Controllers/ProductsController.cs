@@ -8,10 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using DbModels;
 using DbModels.ViewModels;
 using ChurchProducts.Model;
+using static ChurchProducts.Helper;
 
 namespace ChurchProducts.Controllers
 {
-    public class ProductsController : Controller
+    public class ProductsController : Controller 
     {
         private readonly ApplicationDbContext _context;
 
@@ -27,6 +28,7 @@ namespace ChurchProducts.Controllers
         }
         // Get : Products/AddOrEdit
         // Get : Products/AddOrEdit/5
+        [NoDirectAccess]
         public async Task<IActionResult> AddOrEdit(int id=0)
         {
             if (id == 0)
@@ -75,10 +77,19 @@ namespace ChurchProducts.Controllers
                         }
                     }
                 }
-
-                return Json(new { isValid = true, html = Helper.RenderRazorViewToString(this, "_ViewAllProducts", _context.products.ToList()) });
-            }
-            return Json(new { isValid = false, html = Helper.RenderRazorViewToString(this, "AddOrEdit", product) });
+                if (id == 0)
+                {
+                    return Json(new { isValid = true,  Message = "تمة الاضافة بنجاح",html = Helper.RenderRazorViewToString(this, "_ViewAllProducts", _context.products.ToList())  });
+                    
+                }
+                else
+                {
+                   
+                    return Json(new { isValid = true, Message = "تم التعديل بنحاح", html = Helper.RenderRazorViewToString(this, "_ViewAllProducts", _context.products.ToList()) });
+                }
+                }
+            
+            return Json(new { isValid = false,Message = "حدث خطا برجاء مراجعة البيانات واعادة المحاولة", html = Helper.RenderRazorViewToString(this, "AddOrEdit", product) });
         }
         // POST: Products/Delete/5
         [HttpPost, ActionName("Delete")]
@@ -88,11 +99,13 @@ namespace ChurchProducts.Controllers
             var product = await _context.products.FindAsync(id);
             _context.products.Remove(product);
             await _context.SaveChangesAsync();
-            return Json(new { html = Helper.RenderRazorViewToString(this, "_ViewAllProducts", _context.products.ToList()) });
+          
+            return Json(new { html = Helper.RenderRazorViewToString(this, "_ViewAllProducts", _context.products.ToList()) , Message = "تم الحذف بنجاح" });
         }
 
         private bool ProductExists(int id)
         {
+         
             return _context.products.Any(e => e.Id == id);
         }
     }

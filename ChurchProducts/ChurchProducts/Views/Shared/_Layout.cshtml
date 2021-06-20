@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-
+    <style type="text/css" class="init">
+    </style>
     <environment include="Development">
         <!-- VENDOR CSS -->
         <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
@@ -16,12 +17,16 @@
         <link href="~/lib/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" />
         <link href="~/lib/pace-progress/css/pace.css" rel="stylesheet" />
         <!-- MAIN CSS -->
+
         <link href="~/lib/coreui/css/style.css" rel="stylesheet" />
         <link rel="stylesheet" href="~/css/site.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-
-
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+        <script type="text/javascript" charset="utf8" src="https:////cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+        <script src="~/js/site.js"></script>
+        <script src="~/js/notify.js"></script>
+        <script src="~/js/notify.min.js"></script>
     </environment>
     <environment exclude="Development">
         <!-- VENDOR CSS -->
@@ -33,12 +38,17 @@
         <link href="~/lib/pace-progress/css/pace.css" rel="stylesheet" />
         <!-- MAIN CSS -->
         <link href="~/lib/coreui/css/style.min.css" rel="stylesheet" />
-
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+        <script type="text/javascript" charset="utf8" src="https:////cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+        <script src="~/js/site.js"></script>
+        <script src="~/js/notify.js"></script>
+        <script src="~/js/notify.min.js"></script>
     </environment>
-   
+
     @RenderSection("Headers", required: false)
 
     <!-- ICONS -->
@@ -96,7 +106,7 @@
 
 
     </div>
-    <div class="modal" tabindex="-1" role="dialog" id="form-modal">
+    <div class="modal" style="height:50px" tabindex="-1" role="dialog" id="form-modal">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -132,10 +142,16 @@
         <script src="~/lib/coreui/dist/js/coreui.js"></script>
         <!-- Plugins and scripts required by this view-->
         @*<script src="~/lib/chart.js/dist/Chart.js"></script>
-            <script src="~/lib/coreui/js/custom-tooltips.js"></script>
-            <script src="~/lib/coreui/js/main.js"></script>*@
-
+        <script src="~/lib/coreui/js/custom-tooltips.js"></script>
+        <script src="~/lib/coreui/js/main.js"></script>*@
+        <script src="sweetalert2.min.js"></script>
+        <link rel="stylesheet" href="sweetalert2.min.css">
         <script src="~/js/site.js" asp-append-version="true"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+        <script type="text/javascript" charset="utf8" src="https:////cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+        <script src="~/js/site.js"></script>
+        <script src="~/js/notify.js"></script>
+        <script src="~/js/notify.min.js"></script>
     </environment>
     <environment exclude="Development">
         <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -147,10 +163,16 @@
         <script src="~/lib/coreui/dist/js/coreui.min.js"></script>
         <!-- Plugins and scripts required by this view-->
         @*<script src="~/lib/chart.js/dist/Chart.min.js"></script>
-            <script src="~/lib/coreui/js/custom-tooltips.js"></script>
-            <script src="~/lib/coreui/js/main.js"></script>*@
-
+        <script src="~/lib/coreui/js/custom-tooltips.js"></script>
+        <script src="~/lib/coreui/js/main.js"></script>*@
+        <script src="sweetalert2.min.js"></script>
+        <link rel="stylesheet" href="sweetalert2.min.css">
         <script src="~/js/site.min.js" asp-append-version="true"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+        <script type="text/javascript" charset="utf8" src="https:////cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+        <script src="~/js/site.js"></script>
+        <script src="~/js/notify.js"></script>
+        <script src="~/js/notify.min.js"></script>
     </environment>
 
     @RenderSection("Scripts", required: false)

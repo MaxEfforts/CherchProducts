@@ -9,6 +9,10 @@
     {
       "library": "jquery@3.6.0",
       "destination": "wwwroot/jquery/"
+    },
+    {
+      "library": "notify.js@3.0.0",
+      "destination": "wwwroot/js/notify.js/"
     }
   ]
 }
