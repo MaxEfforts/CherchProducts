@@ -1,6 +1,9 @@
 
+using ChurchProducts.Helpers;
+using ChurchProducts.IServices;
 using DbModels;
 using DbModels.Identity;
+using DbRepository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -37,6 +40,8 @@ namespace ChurchProducts
             services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
+            services.AddScoped<IFileService, FileManager>();
+            services.AddTransient<IProductRepo, ProductRepo>(); 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

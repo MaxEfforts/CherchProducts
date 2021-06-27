@@ -13,6 +13,10 @@
     {
       "library": "notify.js@3.0.0",
       "destination": "wwwroot/js/notify.js/"
+    },
+    {
+      "library": "sweetalert@2.1.2",
+      "destination": "wwwroot/sweetalert/"
     }
   ]
 }

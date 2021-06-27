@@ -1,97 +1,91 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DbModels;
 using DbModels.ViewModels;
+using ChurchProducts.IServices;
 using ChurchProducts.Model;
+using Services.Mappers.Identity;
 using static ChurchProducts.Helper;
+using Microsoft.AspNetCore.Http;
+using AutoMapper;
 
 namespace ChurchProducts.Controllers
 {
     public class ProductsController : Controller 
     {
         private readonly ApplicationDbContext _context;
-
-        public ProductsController(ApplicationDbContext context)
+        private readonly IFileService _fileService;
+        public ProductsController(ApplicationDbContext context, IFileService fileService)
         {
             _context = context;
+            _fileService = fileService;
         }
-
         // GET: Products
         public async Task<IActionResult> Index()
         {
             return View(await _context.products.ToListAsync());
         }
-        // Get : Products/AddOrEdit
-        // Get : Products/AddOrEdit/5
-        [NoDirectAccess]
-        public async Task<IActionResult> AddOrEdit(int id=0)
-        {
-            if (id == 0)
-            {
-                return View(new Product());
-            }
-            else
-            {
-                var product = await _context.products.FindAsync(id);
-                if (product == null)
-                {
-                    return NotFound();
-                }
-                return View(product);
-
-            }
-          
-        }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddOrEdit(int id, [Bind("Id,ProductName,ProductPrice")] Product product)
-        { 
-            if (ModelState.IsValid)
+        public async Task<IActionResult> AddOrEdit(int id, ProductModel productModel)
+        {
+           var Product =  IdentityMapper.Mapper.Map<Product>(productModel);
+            try
             {
-                if (id == 0)
+                if (ModelState.IsValid)
                 {
-                    _context.Add(product);
-                    await _context.SaveChangesAsync();
-                }
-                else
-                {
-                    try
+                    if (id == 0)
                     {
-                        _context.Update(product);
+                        Product.ProductImgPath = _fileService.UploadFile(productModel.photoUrl, "images/Products");
+                        _context.Add(Product);
                         await _context.SaveChangesAsync();
                     }
-                    catch (DbUpdateConcurrencyException)
+                    else
                     {
-                        if (!ProductExists(product.Id))
+                        if (productModel.photoUrl != null)
                         {
-                            return NotFound();
+                            Product.ProductImgPath = _fileService.UploadFile(productModel.photoUrl, "images/Products");
                         }
                         else
                         {
-                            throw;
+                            var oldPro = _context.products.AsNoTracking().FirstOrDefault(x => x.Id == productModel.Id);
+                            Product.ProductImgPath = oldPro.ProductImgPath;
                         }
+                        _context.Update(Product);
+                        await _context.SaveChangesAsync();
+                    }
+                    if (id == 0)
+                    {
+                        return Json(new { isValid = true, html = Helper.RenderRazorViewToString(this, "_ViewAllProducts", _context.products.ToList()) });
+                    }
+                    else
+                    {
+                        return Json(new { isValid = true, html = Helper.RenderRazorViewToString(this, "_ViewAllProducts", _context.products.ToList()) });
                     }
                 }
-                if (id == 0)
-                {
-                    return Json(new { isValid = true,  Message = "تمة الاضافة بنجاح",html = Helper.RenderRazorViewToString(this, "_ViewAllProducts", _context.products.ToList())  });
-                    
-                }
-                else
-                {
-                   
-                    return Json(new { isValid = true, Message = "تم التعديل بنحاح", html = Helper.RenderRazorViewToString(this, "_ViewAllProducts", _context.products.ToList()) });
-                }
-                }
-            
-            return Json(new { isValid = false,Message = "حدث خطا برجاء مراجعة البيانات واعادة المحاولة", html = Helper.RenderRazorViewToString(this, "AddOrEdit", product) });
+                return Json(new { isValid = false, html = Helper.RenderRazorViewToString(this, "AddOrEdit", Product) });
+            }
+            catch (Exception ex)
+            { 
+                return Json(new { isValid = false, html = Helper.RenderRazorViewToString(this, "AddOrEdit", Product) });
+            }
         }
-        // POST: Products/Delete/5
+
+        [HttpGet]
+        public async Task<IActionResult> EditForm(int id)
+        {
+            var product = await _context.products.FindAsync(id);
+            var productModel = new DbModels.Model.ProductModel();
+            productModel.Id = product.Id;
+            productModel.ProductName = product.ProductName;
+            productModel.ProductPrice = product.ProductPrice;
+            productModel.ProductImgPath = product.ProductImgPath;
+             return View("Edit", productModel);
+            // return Json(new { isValid = true, html = Helper.RenderRazorViewToString(this, "_AddOrEdit", productModel) });
+        }
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -100,13 +94,7 @@ namespace ChurchProducts.Controllers
             _context.products.Remove(product);
             await _context.SaveChangesAsync();
           
-            return Json(new { html = Helper.RenderRazorViewToString(this, "_ViewAllProducts", _context.products.ToList()) , Message = "تم الحذف بنجاح" });
-        }
-
-        private bool ProductExists(int id)
-        {
-         
-            return _context.products.Any(e => e.Id == id);
+            return Json(new {Message = "تم الحذف بنجاح", html = Helper.RenderRazorViewToString(this, "_ViewAllProducts", _context.products.ToList()) });
         }
     }
 }

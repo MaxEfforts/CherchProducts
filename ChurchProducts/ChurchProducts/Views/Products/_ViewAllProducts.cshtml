@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<DbModels.ViewModels.Product>
+  
     <div class="col-md-12 ">
 
         <h1 class="text-center"><i class="fas fa-comments-dollar text-success"></i>All Products</h1>
@@ -13,13 +14,15 @@
                         @Html.DisplayNameFor(model => model.ProductPrice)
                     </th>
                     <th>
-                                 
+                       
                     </th>
                     <th>
-                               
+
                     </th>
                     <th>
-                        <a onclick="showInPopup('@Url.Action("AddOrEdit","Products",new {id=0},Context.Request.Scheme)','New Transaction')" class="btn btn-success text-white"><i class="fas fa-random"></i> New Product</a>
+
+                        <a onclick="OpenToAdd('AddNew');" class="btn btn-success text-white"><i class="fas fa-random"></i> New Product</a>
+
                     </th>
 
                 </tr>
@@ -27,27 +30,29 @@
             <tbody>
                 @foreach (var item in Model)
                 {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.ProductName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.ProductPrice)
-                    </td>
-                    <td>
-                    </td>
-                    <td>
-                    </td>
-                    <td>
-                        <div>
-                            <a onclick="showInPopup('@Url.Action("AddOrEdit","Products",new {id=item.Id},Context.Request.Scheme)','Update Product')" class="btn btn-info text-white"><i class="fas fa-pencil-alt"></i> Edit</a>
-                            <form asp-action="Delete" asp-route-id="@item.Id" onsubmit="return jQueryAjaxDelete(this)" class="d-inline">
-                                <input type="hidden" asp-for="@item.Id" />
-                                <input type="submit" value="Delete" class="btn btn-danger" />
-                            </form>
-                        </div>
-                    </td>
-                </tr>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ProductName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ProductPrice)
+                        </td>
+                        <td>
+                            <img src="~/@item.ProductImgPath" alt="Avatar" style="background-size: cover; width: 50px; height: 50px; position: relative; display: inline-block; overflow: hidden; margin: 0; border-radius: 50%; ">
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <div>
+                                <a onclick="showInPopup('@Url.Action("EditForm","Products",new {id=item.Id},Context.Request.Scheme)','Update Transaction')" class="btn btn-info text-white"><i class="fas fa-pencil-alt"></i> Edit</a>
+
+                                <form asp-action="Delete" asp-route-id="@item.Id" onsubmit="return jQueryAjaxDelete(this)" class="d-inline">
+                                    <input type="hidden" asp-for="@item.Id" />
+                                    <input type="submit" value="Delete" class="btn btn-danger" />
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
                 }
             </tbody>
         </table>

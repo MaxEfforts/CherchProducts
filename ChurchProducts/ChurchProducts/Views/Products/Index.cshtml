@@ -1,11 +1,13 @@
 ﻿@model IEnumerable<DbModels.ViewModels.Product>
-
+@using DbModels.Model;
 @{
     ViewData["Title"] = "Delete";
     Layout = "~/Views/Shared/_LayoutForms.cshtml";
+    
 }
-
-
+<div class="col-12" id="AddNew">
+    @await Html.PartialAsync("Add", new ProductModel())
+</div>
 <div class="col-12" id="view-all">
     @await Html.PartialAsync("_ViewAllProducts", Model)
 </div>
@@ -25,6 +27,8 @@
         </div>
     </div>
 </div>
+
 @section Scripts{
+  
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

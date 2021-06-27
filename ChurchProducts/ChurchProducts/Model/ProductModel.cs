@@ -1,4 +1,5 @@
 ﻿using DbModels.ViewModels;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -7,13 +8,9 @@ using System.Threading.Tasks;
 
 namespace ChurchProducts.Model
 {
-    public class ProductModel
+    public class ProductModel:Product
     {
-        public int Id { get; set; }
-        [Required(ErrorMessage = "يجب ادخال المنتج")]
-        public string ProductName { get; set; }
-        [Required(ErrorMessage = "يجب ادخال سعر المنتج")]
-        public double ProductPrice { get; set; }
-        public List<Product> productsList { get; set; }
+        
+        public IFormFile photoUrl { get; set; }
     }
 }
