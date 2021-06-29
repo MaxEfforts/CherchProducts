@@ -1,0 +1,48 @@
+﻿@model DbModels.Model.ProductModel
+@{
+    Layout = "";
+    var imgpath ="~/"+Model.ProductImgPath == null || Model.ProductImgPath == "" ? "images/download.png": Model.ProductImgPath;
+}
+<form enctype="multipart/form-data" asp-action="AddOrEdit" asp-route-id="@Model.Id" onsubmit="return jQueryAjaxPost(this,'AddNew','view-all'); ">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="Id" />
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="form-group">
+                <label asp-for="ProductName" class="control-label"></label>
+                <input asp-for="ProductName" class="form-control" />
+                <span asp-validation-for="ProductName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductPrice" class="control-label"></label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                    </div>
+                    <input asp-for="ProductPrice" class="form-control" />
+                </div>
+                <span asp-validation-for="ProductPrice" class="text-danger"></span>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label asp-for="photoUrl" class="control-label"></label>
+                    <div class="custom-file">
+                        <input asp-for="photoUrl" id="customFile2" onchange="FileOnChange(this, 'ImageUpload2');" class="form-control custom-file-input" />
+                        <span class="custom-file-label">Chose Photo...</span>
+                        <span asp-validation-for="photoUrl" class="text-danger"></span>
+                    </div>
+                    <img src="@imgpath" id="ImageUpload2" class="rounded" width="250" />
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary btn-block" />
+            </div>
+        </div>
+       
+    </div>
+    <hr />
+</form>
+
