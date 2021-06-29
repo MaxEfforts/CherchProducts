@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Repo\\CherchProducts\\ChurchProducts\\Services\\Services.csproj": {}
+    "E:\\My Repo\\CherchProducts\\ChurchProducts\\Services\\Services.csproj": {}
   },
   "projects": {
-    "F:\\Repo\\CherchProducts\\ChurchProducts\\DbModels\\DbModels.csproj": {
+    "E:\\My Repo\\CherchProducts\\ChurchProducts\\DbModels\\DbModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Repo\\CherchProducts\\ChurchProducts\\DbModels\\DbModels.csproj",
+        "projectUniqueName": "E:\\My Repo\\CherchProducts\\ChurchProducts\\DbModels\\DbModels.csproj",
         "projectName": "DbModels",
-        "projectPath": "F:\\Repo\\CherchProducts\\ChurchProducts\\DbModels\\DbModels.csproj",
-        "packagesPath": "C:\\Users\\Kerolos\\.nuget\\packages\\",
-        "outputPath": "F:\\Repo\\CherchProducts\\ChurchProducts\\DbModels\\obj\\",
+        "projectPath": "E:\\My Repo\\CherchProducts\\ChurchProducts\\DbModels\\DbModels.csproj",
+        "packagesPath": "C:\\Users\\Mina Samir\\.nuget\\packages\\",
+        "outputPath": "E:\\My Repo\\CherchProducts\\ChurchProducts\\DbModels\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Kerolos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mina Samir\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -72,21 +72,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\Repo\\CherchProducts\\ChurchProducts\\Services\\Services.csproj": {
+    "E:\\My Repo\\CherchProducts\\ChurchProducts\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Repo\\CherchProducts\\ChurchProducts\\Services\\Services.csproj",
+        "projectUniqueName": "E:\\My Repo\\CherchProducts\\ChurchProducts\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "F:\\Repo\\CherchProducts\\ChurchProducts\\Services\\Services.csproj",
-        "packagesPath": "C:\\Users\\Kerolos\\.nuget\\packages\\",
-        "outputPath": "F:\\Repo\\CherchProducts\\ChurchProducts\\Services\\obj\\",
+        "projectPath": "E:\\My Repo\\CherchProducts\\ChurchProducts\\Services\\Services.csproj",
+        "packagesPath": "C:\\Users\\Mina Samir\\.nuget\\packages\\",
+        "outputPath": "E:\\My Repo\\CherchProducts\\ChurchProducts\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Kerolos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mina Samir\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -100,8 +100,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "F:\\Repo\\CherchProducts\\ChurchProducts\\DbModels\\DbModels.csproj": {
-                "projectPath": "F:\\Repo\\CherchProducts\\ChurchProducts\\DbModels\\DbModels.csproj"
+              "E:\\My Repo\\CherchProducts\\ChurchProducts\\DbModels\\DbModels.csproj": {
+                "projectPath": "E:\\My Repo\\CherchProducts\\ChurchProducts\\DbModels\\DbModels.csproj"
               }
             }
           }
@@ -140,7 +140,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
