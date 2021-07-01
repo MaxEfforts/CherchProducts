@@ -4,14 +4,16 @@ using DbModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DbModels.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210630120253_card")]
+    partial class card
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -106,9 +108,6 @@ namespace DbModels.Migrations
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("UserSecretKey")
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -236,9 +235,6 @@ namespace DbModels.Migrations
                     b.Property<DateTime>("AddedOn")
                         .HasColumnType("datetime2");
 
-                    b.Property<double>("Balance")
-                        .HasColumnType("float");
-
                     b.Property<string>("DeletedBy")
                         .HasColumnType("nvarchar(max)");
 
@@ -253,6 +249,9 @@ namespace DbModels.Migrations
 
                     b.Property<string>("UserIDFK")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<double>("UserPalance")
+                        .HasColumnType("float");
 
                     b.HasKey("Id");
 
@@ -426,11 +425,11 @@ namespace DbModels.Migrations
 
             modelBuilder.Entity("DbModels.ViewModels.UserWallet", b =>
                 {
-                    b.HasOne("DbModels.Identity.ApplicationUser", "AppUser")
+                    b.HasOne("DbModels.Identity.ApplicationUser", "applicationUser")
                         .WithMany()
                         .HasForeignKey("UserIDFK");
 
-                    b.Navigation("AppUser");
+                    b.Navigation("applicationUser");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

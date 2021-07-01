@@ -33,4 +33,18 @@
     <Folder Include="Model\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="Views\Shared\Error.cshtml" />
+    <None Include="Views\Shared\_AsideMenu.cshtml" />
+    <None Include="Views\Shared\_CookieConsentPartial.cshtml" />
+    <None Include="Views\Shared\_Layout.cshtml" />
+    <None Include="Views\Shared\_LayoutForms.cshtml" />
+    <None Include="Views\Shared\_LayoutFullScreen.cshtml" />
+    <None Include="Views\Shared\_LoginPartial.cshtml" />
+    <None Include="Views\Shared\_NavBar.cshtml" />
+    <None Include="Views\Shared\_NormalLayout.cshtml" />
+    <None Include="Views\Shared\_SideBar.cshtml" />
+    <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
+  </ItemGroup>
+
 </Project>

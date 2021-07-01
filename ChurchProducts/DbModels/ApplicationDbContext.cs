@@ -18,6 +18,7 @@ namespace DbModels
         {
         }
         public DbSet<Product> products { get; set; }
+        public DbSet<Card> Cards { get; set; }
         public DbSet<ShopingCard> shopingCards { get; set; }
         public DbSet<UserWallet> userWallets { get; set; }
 

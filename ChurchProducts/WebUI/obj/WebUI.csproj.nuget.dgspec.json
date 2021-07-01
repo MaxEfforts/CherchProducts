@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Repo\\CherchProducts\\ChurchProducts\\WebUI\\WebUI.csproj": {}
+    "E:\\My Repo\\CherchProducts\\ChurchProducts\\WebUI\\WebUI.csproj": {}
   },
   "projects": {
-    "F:\\Repo\\CherchProducts\\ChurchProducts\\WebUI\\WebUI.csproj": {
+    "E:\\My Repo\\CherchProducts\\ChurchProducts\\DbModels\\DbModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Repo\\CherchProducts\\ChurchProducts\\WebUI\\WebUI.csproj",
-        "projectName": "WebUI",
-        "projectPath": "F:\\Repo\\CherchProducts\\ChurchProducts\\WebUI\\WebUI.csproj",
-        "packagesPath": "C:\\Users\\Kerolos\\.nuget\\packages\\",
-        "outputPath": "F:\\Repo\\CherchProducts\\ChurchProducts\\WebUI\\obj\\",
+        "projectUniqueName": "E:\\My Repo\\CherchProducts\\ChurchProducts\\DbModels\\DbModels.csproj",
+        "projectName": "DbModels",
+        "projectPath": "E:\\My Repo\\CherchProducts\\ChurchProducts\\DbModels\\DbModels.csproj",
+        "packagesPath": "C:\\Users\\Mina Samir\\.nuget\\packages\\",
+        "outputPath": "E:\\My Repo\\CherchProducts\\ChurchProducts\\DbModels\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Kerolos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mina Samir\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,220 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\My Repo\\CherchProducts\\ChurchProducts\\DbRepository\\DbRepository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\My Repo\\CherchProducts\\ChurchProducts\\DbRepository\\DbRepository.csproj",
+        "projectName": "DbRepository",
+        "projectPath": "E:\\My Repo\\CherchProducts\\ChurchProducts\\DbRepository\\DbRepository.csproj",
+        "packagesPath": "C:\\Users\\Mina Samir\\.nuget\\packages\\",
+        "outputPath": "E:\\My Repo\\CherchProducts\\ChurchProducts\\DbRepository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mina Samir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\My Repo\\CherchProducts\\ChurchProducts\\DbModels\\DbModels.csproj": {
+                "projectPath": "E:\\My Repo\\CherchProducts\\ChurchProducts\\DbModels\\DbModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\My Repo\\CherchProducts\\ChurchProducts\\Services\\Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\My Repo\\CherchProducts\\ChurchProducts\\Services\\Services.csproj",
+        "projectName": "Services",
+        "projectPath": "E:\\My Repo\\CherchProducts\\ChurchProducts\\Services\\Services.csproj",
+        "packagesPath": "C:\\Users\\Mina Samir\\.nuget\\packages\\",
+        "outputPath": "E:\\My Repo\\CherchProducts\\ChurchProducts\\Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mina Samir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\My Repo\\CherchProducts\\ChurchProducts\\DbModels\\DbModels.csproj": {
+                "projectPath": "E:\\My Repo\\CherchProducts\\ChurchProducts\\DbModels\\DbModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "Magick.NET-Q16-AnyCPU": {
+              "target": "Package",
+              "version": "[7.24.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\My Repo\\CherchProducts\\ChurchProducts\\WebUI\\WebUI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\My Repo\\CherchProducts\\ChurchProducts\\WebUI\\WebUI.csproj",
+        "projectName": "WebUI",
+        "projectPath": "E:\\My Repo\\CherchProducts\\ChurchProducts\\WebUI\\WebUI.csproj",
+        "packagesPath": "C:\\Users\\Mina Samir\\.nuget\\packages\\",
+        "outputPath": "E:\\My Repo\\CherchProducts\\ChurchProducts\\WebUI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mina Samir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\My Repo\\CherchProducts\\ChurchProducts\\DbModels\\DbModels.csproj": {
+                "projectPath": "E:\\My Repo\\CherchProducts\\ChurchProducts\\DbModels\\DbModels.csproj"
+              },
+              "E:\\My Repo\\CherchProducts\\ChurchProducts\\DbRepository\\DbRepository.csproj": {
+                "projectPath": "E:\\My Repo\\CherchProducts\\ChurchProducts\\DbRepository\\DbRepository.csproj"
+              },
+              "E:\\My Repo\\CherchProducts\\ChurchProducts\\Services\\Services.csproj": {
+                "projectPath": "E:\\My Repo\\CherchProducts\\ChurchProducts\\Services\\Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.6, )"
@@ -53,6 +267,12 @@
               "version": "[5.0.6, )"
             },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.6, )"
             },
@@ -83,7 +303,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
