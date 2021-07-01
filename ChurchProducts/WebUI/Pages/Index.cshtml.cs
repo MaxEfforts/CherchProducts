@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DbModels;
+using DbModels.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using System;
@@ -11,15 +13,19 @@ namespace WebUI.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
+        private readonly ApplicationDbContext _Context;
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public List<Product> Products { get; set; }
+
+        public IndexModel(ILogger<IndexModel> logger, ApplicationDbContext Context)
         {
             _logger = logger;
+            _Context = Context;
         }
 
         public void OnGet()
         {
-
+            Products = _Context.products.ToList();
         }
     }
 }

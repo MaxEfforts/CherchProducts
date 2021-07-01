@@ -1,5 +1,6 @@
 ﻿
 using DbModels.ModelBases;
+using DbModels.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,8 @@ namespace DbModels.Identity
         public DateTime BirthDate { get; set; }
         public string Address { get; set; }
         public bool IsServant { get; set; }
+        public int CardId { get; set; }
+        public Card Card { get; set; }
         public DateTime AddedOn { get; set; }
         public string AddedBy { get; set; }
         public DateTime DeletedOn { get; set; }
