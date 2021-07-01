@@ -62,7 +62,6 @@ jQueryAjaxPost = (form,AddId,tableId) => {
 }
 ////////////////
 jQueryAjaxDelete = form => {
-   
     if (confirm('Are you sure to delete this record ?')) {
         try {
             debugger;

@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+using Services.IServices;
 
 namespace ChurchProducts.Areas.Identity.Pages.Account
 {
@@ -23,17 +24,20 @@ namespace ChurchProducts.Areas.Identity.Pages.Account
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<RegisterModel> _logger;
+        private readonly IEncrptionAndDecreption _encrptionAndDecreption;
         private readonly IEmailSender _emailSender;
 
         public RegisterModel(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             ILogger<RegisterModel> logger,
+            IEncrptionAndDecreption encrptionAndDecreption,
             IEmailSender emailSender)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
+            _encrptionAndDecreption = encrptionAndDecreption;
             _emailSender = emailSender;
         }
 
@@ -46,10 +50,24 @@ namespace ChurchProducts.Areas.Identity.Pages.Account
 
         public class InputModel
         {
+     
+            public string UserSecretKey { get; set; }
+            [Required]
+            [Display(Name = "FirstName")]
+            public string FirstName { get; set; }
+            [Required]
+            [Display(Name = "LastName")]
+            public string LastName { get; set; }
+        
+            [Display(Name = "Address")]
+            public string Address { get; set; }
             [Required]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
+            [Required]
+            [Display(Name = "Phone Number")]
+            public string PhoneNumber { get; set; }
 
             [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
@@ -75,12 +93,15 @@ namespace ChurchProducts.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = Input.Email, Email = Input.Email };
+                var user = new ApplicationUser {UserSecretKey = Input.UserSecretKey,FirstName = Input.FirstName,LastName = Input.LastName, UserName = Input.Email, Email = Input.Email ,PhoneNumber = Input.PhoneNumber,Address = Input.Address };
+                var userPassword = Input.Password;
                 var result = await _userManager.CreateAsync(user, Input.Password);
+                var usersecrt = _encrptionAndDecreption.EncryptString(userPassword, user.Id);
+                user.UserSecretKey = usersecrt;
+                await _userManager.UpdateAsync(user);
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
-
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                     var callbackUrl = Url.Page(
@@ -107,8 +128,6 @@ namespace ChurchProducts.Areas.Identity.Pages.Account
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
             }
-
-            // If we got this far, something failed, redisplay form
             return Page();
         }
     }

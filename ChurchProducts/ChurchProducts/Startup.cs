@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Services.IServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,6 +42,7 @@ namespace ChurchProducts
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddScoped<IFileService, FileManager>();
+            services.AddScoped<IEncrptionAndDecreption, EncrptionAndDecrption>();
             services.AddTransient<IProductRepo, ProductRepo>(); 
         }
 
