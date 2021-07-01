@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace DbModels.ViewModels
 {
-    public class UserWallet : AbstractTableBase
+    public class UserWallet: AbstractTableBase
     {
         public int Id { get; set; }
-        public double UserPalance { get; set; }
-        [ForeignKey("applicationUser")]
+        public double Balance { get; set; }
+        [ForeignKey("AppUser")]
         public string UserIDFK { get; set; }
-        public ApplicationUser applicationUser { get; set; }
+        public ApplicationUser AppUser { get; set; }
     }
 }

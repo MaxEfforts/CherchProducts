@@ -23,7 +23,6 @@ namespace ChurchProducts.Controllers
             _context = context;
             _fileService = fileService;
         }
-        // GET: Products
         public async Task<IActionResult> Index()
         {
             return View(await _context.products.ToListAsync());
@@ -73,7 +72,7 @@ namespace ChurchProducts.Controllers
                 return Json(new { isValid = false, html = Helper.RenderRazorViewToString(this, "AddOrEdit", Product) });
             }
         }
-
+   
         [HttpGet]
         public async Task<IActionResult> EditForm(int id)
         {
@@ -84,7 +83,6 @@ namespace ChurchProducts.Controllers
             productModel.ProductPrice = product.ProductPrice;
             productModel.ProductImgPath = product.ProductImgPath;
              return View("Edit", productModel);
-            // return Json(new { isValid = true, html = Helper.RenderRazorViewToString(this, "_AddOrEdit", productModel) });
         }
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -93,7 +91,6 @@ namespace ChurchProducts.Controllers
             var product = await _context.products.FindAsync(id);
             _context.products.Remove(product);
             await _context.SaveChangesAsync();
-          
             return Json(new {Message = "تم الحذف بنجاح", html = Helper.RenderRazorViewToString(this, "_ViewAllProducts", _context.products.ToList()) });
         }
     }
