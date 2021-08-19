@@ -18,11 +18,11 @@
                 <form action="#" method="post" class="last">
                     <input type="hidden" name="cmd" value="_cart">
                     <input type="hidden" name="display" value="1">
-                    <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+                    <a class="w3view-cart" href="/mycard" style="background:none" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a>
                 </form>
             </div>
             <div class="w3l_offers">
-                <p>هذا الموقع خاص بشباب الكاروز <a href="products.html">تسوق الان</a></p>
+                <p>هذا الموقع خاص بشباب الكاروز <a href="/">تسوق الان</a></p>
             </div>
             <div class="agile-login">
                 <partial name="_LoginPartial" />
@@ -38,7 +38,7 @@
                 </ul>
             </div>
             <div class="w3ls_logo_products_left">
-                <h1><a href="index.html">الكاروز استور</a></h1>
+                <h1><a href="/">الكاروز استور</a></h1>
             </div>
             <div class="w3l_search">
                 <form action="#" method="post">
@@ -56,12 +56,6 @@
     <main role="main" class="pb-3">
         @RenderBody()
     </main>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - WebUI - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

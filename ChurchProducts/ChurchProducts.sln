@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbRepository", "DbRepositor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{5BF7C082-99D6-4C0A-B47B-B2983FC8B83B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUI", "WebUI\WebUI.csproj", "{CAFC4C9E-CEE0-4559-B337-D4CF515A484A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebUI", "WebUI\WebUI.csproj", "{CAFC4C9E-CEE0-4559-B337-D4CF515A484A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
