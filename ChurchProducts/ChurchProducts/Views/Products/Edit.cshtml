@@ -1,14 +1,13 @@
 ﻿@model DbModels.Model.ProductModel
 @{
     Layout = "";
-    var imgpath ="~/"+Model.ProductImgPath == null || Model.ProductImgPath == "" ? "images/download.png": Model.ProductImgPath;
+    var imgpath = "~/" + Model.ProductImgPath == null || Model.ProductImgPath == "" ? "images/download.png" : Model.ProductImgPath;
 }
 <form enctype="multipart/form-data" asp-action="AddOrEdit" asp-route-id="@Model.Id" onsubmit="return jQueryAjaxPost(this,'AddNew','view-all'); ">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <input type="hidden" asp-for="Id" />
     <div class="row">
         <div class="col-md-12">
-
             <div class="form-group">
                 <label asp-for="ProductName" class="control-label"></label>
                 <input asp-for="ProductName" class="form-control" />
@@ -41,7 +40,6 @@
                 <input type="submit" value="Save" class="btn btn-primary btn-block" />
             </div>
         </div>
-       
     </div>
     <hr />
 </form>

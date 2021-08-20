@@ -13,14 +13,16 @@ namespace DbModels
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-            public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-            : base(options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        : base(options)
         {
         }
         public DbSet<Product> products { get; set; }
         public DbSet<Card> Cards { get; set; }
         public DbSet<ShopingCard> shopingCards { get; set; }
         public DbSet<UserWallet> userWallets { get; set; }
+        public DbSet<Order> orders { get; set; }
+        public DbSet<OrderDetails> orderDetails { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -4,14 +4,16 @@ using DbModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DbModels.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210820092718_EditOrder")]
+    partial class EditOrder
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -174,33 +176,16 @@ namespace DbModels.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserIDFK");
-
-                    b.ToTable("orders");
-                });
-
-            modelBuilder.Entity("DbModels.ViewModels.OrderDetails", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("orderIDFK")
-                        .HasColumnType("int");
-
                     b.Property<int>("productIDFK")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("orderIDFK");
+                    b.HasIndex("UserIDFK");
 
                     b.HasIndex("productIDFK");
 
-                    b.ToTable("orderDetails");
+                    b.ToTable("orders");
                 });
 
             modelBuilder.Entity("DbModels.ViewModels.Product", b =>
@@ -464,24 +449,13 @@ namespace DbModels.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("applicationUser");
-                });
-
-            modelBuilder.Entity("DbModels.ViewModels.OrderDetails", b =>
-                {
-                    b.HasOne("DbModels.ViewModels.Order", "order")
-                        .WithMany()
-                        .HasForeignKey("orderIDFK")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("DbModels.ViewModels.Product", "product")
                         .WithMany()
                         .HasForeignKey("productIDFK")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("order");
+                    b.Navigation("applicationUser");
 
                     b.Navigation("product");
                 });

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<DbModels.ViewModels.OrderDetails>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutForms.cshtml";
+}
+
+<h1>Order Details</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.product.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.product.ProductPrice)
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.product.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.product.ProductPrice)
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
